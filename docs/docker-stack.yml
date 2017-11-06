@@ -1,4 +1,3 @@
-version: '2'
 services:
   openvpn:
     cap_add:
@@ -10,4 +9,7 @@ services:
      - "443:443/tcp"
     restart: always
     volumes:
-     - ./openvpn-data/conf:/etc/openvpn
+     - openvpn-etc:/etc/openvpn
+
+volumes:
+  openvpn-etc:
